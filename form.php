@@ -10,21 +10,29 @@
 <body>
     <div class="container">
 
-        <form>
+        <form action="form_contact.php" method="POST">
+          
+          <div class="form-group">
+            <label for="exampleInputName">Họ và Tên</label>
+            <input type="text" class="form-control" id="exampleInputName" placeholder="Họ và Tên" name="fullname">
+          </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <label for="exampleInputPhone">Số điện thoại</label>
+            <input type="text" name="phone" class="form-control" id="exampleInputPhone" aria-describedby="emailHelp" placeholder="Số điện thoại">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
           </div>
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          
+          <div class="form-group">
+                <label for="exampleFormControlTextarea1">Nội dung liên hệ</label>
+                <textarea class="form-control" name="content" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+          <input type="submit" class="btn btn-primary" name="btn-submit"></input>
+          <input type="reset" class="btn btn-danger" value="Clear"></input>
         </form>
     </div>
 </body>
